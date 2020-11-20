@@ -87,7 +87,7 @@ if($cab=='cedmicro') {
         $rem = $final_distance - 160;
         $fare = $fare + 250 + (10*16.5) + (50*15) + ($rem*13.20) ;
     } else if($final_distance > 160) {
-        $rem1 = $final_distance - 160;
+        $rem = $final_distance - 160;
         $fare = $fare + 250 + (10*16.5) + (50*15) + (100*13.20) + ($rem*11.50) ;
     }
     $fare = $fare + (2*$l_price);

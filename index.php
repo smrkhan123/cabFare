@@ -33,7 +33,7 @@
             <ul class="nav navbar-nav">
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="#">Book Cab</a></li>
+              <li class="active"><a href="#main">Book Cab</a></li>
               <li><a href="#">About Us</a></li>
               <li><a href="#">Contact Us</a></li>
               <li><a href="#">Help</a></li>
