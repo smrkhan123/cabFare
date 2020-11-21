@@ -17,8 +17,6 @@ foreach($arr as $key => $value) {
     }
 }
 $final_distance = abs($pickup_distance-$drop_distance);
-// $final_distance = abs($fd);
-// echo abs($final_distance);
 
 //calculating luggage price
 
@@ -40,55 +38,43 @@ if($cab=='cedmicro') {
     if($final_distance <=10) {
         $fare = $fare + 50 + $final_distance*13.5;
     } else if($final_distance > 10 && $final_distance <= 60) {
-        $rem = $final_distance - 10;
-        $fare = $fare + 50 + (10*13.5) + ($rem*12);
+        $fare = $fare + 50 + (10*13.5) + (($final_distance - 10)*12);
     } else if($final_distance > 60 && $final_distance <= 160) {
-        $rem = $final_distance - 60;
-        $fare = $fare + 50 + (10*13.5) + (50*12) + ($rem*10.20) ;
+        $fare = $fare + 50 + (10*13.5) + (50*12) + (($final_distance - 60)*10.20) ;
     } else if($final_distance > 160) {
-        $rem = $final_distance - 160;
-        $fare = $fare + 50 + (10*13.5) + (50*12) + (100*10.20) + ($rem*8.50);
+        $fare = $fare + 50 + (10*13.5) + (50*12) + (100*10.20) + (($final_distance - 160)*8.50);
     }
 } else if($cab=='cedmini') {
     if($final_distance <=10) {
         $fare = $fare + 150 + $final_distance*14.5;
     } else if($final_distance > 10 && $final_distance <= 60) {
-        $rem = $final_distance - 10;
-        $fare = $fare + 150 + (10*14.5) + ($rem*13);
+        $fare = $fare + 150 + (10*14.5) + (($final_distance - 10)*13);
     } else if($final_distance > 60 && $final_distance <= 160) {
-        $rem = $final_distance - 60;
-        $fare = $fare + 150 + (10*14.5) + (50*13) + ($rem*11.20) ;
+        $fare = $fare + 150 + (10*14.5) + (50*13) + (($final_distance - 60)*11.20) ;
     } else if($final_distance > 100) {
-        $rem = $final_distance - 160;
-        $fare = $fare + 150 + (10*14.5) + (50*13) + (100*11.20) + ($rem*9.50) ;
+        $fare = $fare + 150 + (10*14.5) + (50*13) + (100*11.20) + (($final_distance - 160)*9.50) ;
     }
     $fare = $fare + $l_price;
 } else if($cab=='cedroyal') {
     if($final_distance <=10) {
         $fare = $fare + 200 + $final_distance*15.5;
     } else if($final_distance > 10 && $final_distance <= 60) {
-        $rem = $final_distance - 10;
-        $fare = $fare + 200 + (10*15.5) + ($rem*14);
+        $fare = $fare + 200 + (10*15.5) + (($final_distance - 10)*14);
     } else if($final_distance > 60 && $final_distance <= 160) {
-        $rem = $final_distance - 60;
-        $fare = $fare + 200 + (10*15.5) + (50*14) + ($rem*12.20) ;
+        $fare = $fare + 200 + (10*15.5) + (50*14) + (($final_distance - 60)*12.20) ;
     } else if($final_distance > 100) {
-        $rem = $final_distance - 160;
-        $fare = $fare + 200 + (10*15.5) + (50*14) + (100*12.20) + ($rem*10.50) ;
+        $fare = $fare + 200 + (10*15.5) + (50*14) + (100*12.20) + (($final_distance - 160)*10.50) ;
     }
     $fare = $fare + $l_price;
 } else if($cab=='cedsuv') {
     if($final_distance <=10) {
         $fare = $fare + 250 + $final_distance*16.5;
     } else if($final_distance > 10 && $final_distance <= 60) {
-        $rem = $final_distance - 10;
-        $fare = $fare + 250 + (10*16.5) + ($rem*15);
+        $fare = $fare + 250 + (10*16.5) + (($final_distance - 10)*15);
     } else if($final_distance > 60 && $final_distance <= 160) {
-        $rem = $final_distance - 160;
-        $fare = $fare + 250 + (10*16.5) + (50*15) + ($rem*13.20) ;
+        $fare = $fare + 250 + (10*16.5) + (50*15) + (($final_distance - 60)*13.20) ;
     } else if($final_distance > 160) {
-        $rem = $final_distance - 160;
-        $fare = $fare + 250 + (10*16.5) + (50*15) + (100*13.20) + ($rem*11.50) ;
+        $fare = $fare + 250 + (10*16.5) + (50*15) + (100*13.20) + (($final_distance - 160)*11.50) ;
     }
     $fare = $fare + (2*$l_price);
 }
