@@ -90,9 +90,6 @@ footer {
     background-color: #ebef0c;
     border: 0px;
 }
-/* .sub_btn:hover {
-    background-color: #e2e602;
-} */
 .col-sm-offset-2 {
     margin-left: 0px !important;
 }
@@ -109,7 +106,6 @@ footer {
     font-size: 18px;
 }
 footer {
-    /* background-color: black; */
     color: black ;
 }
 .sect10 {
